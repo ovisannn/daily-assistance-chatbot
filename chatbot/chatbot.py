@@ -13,12 +13,12 @@ from tensorflow import keras
 from keras.models import load_model
 
 lemmatizer = WordNetLemmatizer()
-op = open('intents.json')
+op = open('chatbot/intents.json')
 intents = json.load(op)
 
-words = pickle.load(open('words.pkl', 'rb'))
-classes = pickle.load(open('classes.pkl', 'rb'))
-model = load_model('chatbot_model.h5')
+words = pickle.load(open('chatbot/words.pkl', 'rb'))
+classes = pickle.load(open('chatbot/classes.pkl', 'rb'))
+model = load_model('chatbot/chatbot_model.h5')
 
 def cleanUpSentence(sentence):
     sentenceWrods = nltk.word_tokenize(sentence)
@@ -59,9 +59,9 @@ def getResponse(intentList, intentJson):
             break
     return result
 
-# while True:
-#     print('the bot is running...')
-#     message = input('INPUT : ')
-#     ints = predictClasses(message)
-#     res = getResponse(ints, intents)
-#     print('BOT SAYS : ',  res)
+while True:
+    print('the bot is running...')
+    message = input('INPUT : ')
+    ints = predictClasses(message)
+    res = getResponse(ints, intents)
+    print('BOT SAYS : ',  res)
