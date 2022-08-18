@@ -12,6 +12,8 @@ from nltk.stem import WordNetLemmatizer
 from tensorflow import keras
 from keras.models import load_model
 
+import chatbotHelpers
+
 lemmatizer = WordNetLemmatizer()
 op = open('chatbot/intents.json')
 intents = json.load(op)
@@ -54,10 +56,15 @@ def getResponse(intentList, intentJson):
     listOfIntents = intentJson['intents']
     # print(listOfIntents)
     for i in listOfIntents:
+        if tag == 'hours':
+            result = chatbotHelpers.GetHours()
+            break
         if i['tag'] == tag:
             result = random.choice(i['responses'])
             break
     return result
+
+
 
 while True:
     print('the bot is running...')

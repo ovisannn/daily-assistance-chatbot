@@ -21,7 +21,7 @@ from keras.optimizers import SGD
 
 
 lemmatizer = WordNetLemmatizer()
-op = open('intents.json')
+op = open('chatbot/intents.json')
 intents = json.load(op)
 # print(intents)
 
