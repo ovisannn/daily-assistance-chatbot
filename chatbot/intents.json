@@ -1,33 +1,45 @@
 {"intents": [
-    {"tag": "greeting",
-     "patterns": ["Hi", "hallo", "apa kabar", "selamat pagi", "selamat sore", "selamat siang"],
-     "responses": ["Hello!", "Hi", "Ada yang bisa saya bantu?", "senang bertemu denganmu!"],
-     "context_set": ""
+    {
+        "tag": "sapa",
+        "patterns": ["Hi", "hallo", "apa kabar", "selamat pagi", "selamat sore", "selamat siang"],
+        "responses": ["Hello!", "Hi", "Ada yang bisa saya bantu?", "senang bertemu denganmu!"],
+        "context_set": ""
     },
-    {"tag": "goodbye",
-     "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day"],
-     "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
-     "context_set": ""
+    {
+        "tag": "selamat tinggal",
+        "patterns": ["salamat tinggal", "kita sambung nanti", "aku pergi dulu"],
+        "responses": ["sedih melihat kamu pergi", "oke kita sambung lagi nanti!", "selamat tinggal !"],
+        "context_set": ""
     },
-    {"tag": "age",
-     "patterns": ["how old", "how old is tim", "what is your age", "how old are you", "age?"],
-     "responses": ["I am 18 years old!", "18 years young!"],
-     "context_set": ""
+    {
+        "tag": "umur",
+        "patterns": ["umur", "berapa umur kamu"],
+        "responses": [""],
+        "context_set": ""
     },
-    {"tag": "name",
-     "patterns": ["what is your name", "what should I call you", "whats your name?"],
-     "responses": ["You can call me Noesa.", "I'm Noesa!", "I'm Noesa. I was created by Ovisannn."],
-     "context_set": ""
+    {
+        "tag": "nama",
+        "patterns": ["siapa nama kamu", "aku bisa memanggilmu apa", "nama"],
+        "responses": ["kamu bisa manggil aku noesa", "Aku Noesa!", "namaku Noesa ! salam kenal !"],
+        "context_set": ""
     },
-    {"tag": "shop",
-     "patterns": ["Id like to buy something", "whats on the menu", "what do you reccommend?", "could i get something to eat"],
-     "responses": ["We sell chocolate chip cookies for $2!", "Cookies are on the menu!"],
-     "context_set": ""
+    {
+        "tag": "jam",
+        "patterns":["jam", "jam berapa", "sekarang jam berapa", ""],
+        "responses":[],
+        "context_set":""
     },
-    {"tag": "hours",
-     "patterns": ["when are you guys open", "what are your hours", "hours of operation"],
-     "responses": ["We are open 7am-4pm Monday-Friday!"],
-     "context_set": ""
+    {
+        "tag": "terima kasih",
+        "patterns":["terimakasih", "terima kasih", "tq"],
+        "responses":["senang membantu", "dengan senang hati", "terima kasih kembali"],
+        "context_set":""
+    },
+    {
+        "tag": "hari",
+        "patterns":["sekarang hari apa", "hari ini hari apa", "apa hari ini?", "hari ini apa"],
+        "responses":[],
+        "context_set":""
     }
 ]
 }

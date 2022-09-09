@@ -56,8 +56,11 @@ def getResponse(intentList, intentJson):
     listOfIntents = intentJson['intents']
     # print(listOfIntents)
     for i in listOfIntents:
-        if tag == 'hours':
+        if tag == 'jam':
             result = chatbotHelpers.GetHours()
+            break
+        if tag == 'umur':
+            result = chatbotHelpers.GetNoesaAge()
             break
         if i['tag'] == tag:
             result = random.choice(i['responses'])

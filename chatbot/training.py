@@ -41,12 +41,13 @@ for intent in intents['intents']:
 # print(documents)
 words = [lemmatizer.lemmatize(word) for word in words if word not in ignoreLetters]
 wrodds = sorted(set(words))
-# print(words)
+print(words)
 
 classes = sorted(set(classes))
+# print(classes)
 
-pickle.dump(words, open('words.pkl', 'wb'))
-pickle.dump(classes, open('classes.pkl', 'wb'))
+pickle.dump(words, open('chatbot/words.pkl', 'wb'))
+pickle.dump(classes, open('chatbot/classes.pkl', 'wb'))
 
 training = []
 outputEmpty = [0] * len(classes)
@@ -83,5 +84,5 @@ model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy
 # model.save('chatbot_model.model')
 
 hist = model.fit(np.array(trainX), np.array(trainY), epochs= 200, batch_size= 5, verbose= 1)
-model.save('chatbot_model.h5', hist)
+model.save('chatbot/chatbot_model.h5', hist)
 # print('done')

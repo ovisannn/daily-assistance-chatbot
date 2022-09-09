@@ -17,12 +17,12 @@ def GetNoesaAge():
     years = int(totalDays/365)
     days = totalDays%30
     
-    if (months and years) == 0:
-        return('%s days'%(days))
+    if months ==0 and years == 0:
+        return('%s hari'%(days))
     elif years == 0:
-        return('%s days %s months'%(days, months))
+        return('%s hari %s bulan'%(days, months))
     else:
-        return('%s days %s months and %s years'%(days, months, years))
+        return('%s hari %s bulan dan %s tahun'%(days, months, years))
 
 
 # if __name__ == '__main__':
