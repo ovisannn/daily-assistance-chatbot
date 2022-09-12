@@ -1,3 +1,4 @@
+from ast import Break
 from audioop import reverse
 from email import message
 import random
@@ -61,6 +62,9 @@ def getResponse(intentList, intentJson):
             break
         if tag == 'umur':
             result = chatbotHelpers.GetNoesaAge()
+            break
+        if tag == "hari":
+            result = chatbotHelpers.GetDay()
             break
         if i['tag'] == tag:
             result = random.choice(i['responses'])

@@ -21,5 +21,5 @@ def GetHariNasional():
     dataJson = json.loads(data)
     return dataJson
 
-# if __name__ == "__main__":
-#     print(GetHariNasional())
+if __name__ == "__main__":
+    print(GetHariNasional())

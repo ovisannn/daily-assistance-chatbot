@@ -41,7 +41,7 @@ for intent in intents['intents']:
 # print(documents)
 words = [lemmatizer.lemmatize(word) for word in words if word not in ignoreLetters]
 wrodds = sorted(set(words))
-print(words)
+# print(words)
 
 classes = sorted(set(classes))
 # print(classes)

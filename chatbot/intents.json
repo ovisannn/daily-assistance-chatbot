@@ -42,10 +42,22 @@
         "context_set":""
     },
     {
-        "tag": "yolo",
-        "patterns":["yolo"],
-        "responses":["yolooooowowowowolwolwolw"],
+        "tag": "cinta",
+        "patterns":["aku cinta kamu", "apakah kamu mencintaiku", "love u", "aku suka sama kamu"],
+        "responses":["aku lebih mencintaimu", "aku juga, tapi sayang aku bukan manusia", "iya sayang, aku juga"],
         "context_set":""
+    },
+    {
+        "tag" : "cuaca",
+        "patterns": ["cuaca hari ini", "bagaimana cuaca hari ini", "apakah cuaca hari ini baik", "cuaca", "info cuaca"],
+        "responses":[],
+        "context_set":[]
+    },
+    {
+        "tag" : "hari nasional",
+        "patterns": ["info libur", "info libur bulan ini", "kapan ada libur nasional"],
+        "responses":[],
+        "context_set":[]        
     }
 ]
 }

@@ -3,10 +3,25 @@ import string
 
 
 def GetHours():
-    return datetime.today()
+    return f"waktu sekarang adalah {datetime.today()}"
 
 def GetDay():
-    return datetime.now().strftime("%A")
+    hari = datetime.now().strftime('%A')
+    if hari == "Sunday":
+        trans = "Minggu"
+    if hari == "Monday":
+        trans = "Senin"
+    if hari == "Tuesday":
+        trans = "Selasa"
+    if hari == "Wednesday":
+        trans = "Rabu"
+    if hari == "Thrusday":
+        trans = "Kamis"
+    if hari == "Friday":
+        trans = "Jumat"
+    if hari == "Saturday":
+        trans = "Sabtu"
+    return f"sekarang adalah hari {trans}"
 
 def GetNoesaAge():
     built = date(2022, 8, 1)
