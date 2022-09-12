@@ -40,6 +40,12 @@
         "patterns":["sekarang hari apa", "hari ini hari apa", "apa hari ini?", "hari ini apa"],
         "responses":[],
         "context_set":""
+    },
+    {
+        "tag": "yolo",
+        "patterns":["yolo"],
+        "responses":["yolooooowowowowolwolwolw"],
+        "context_set":""
     }
 ]
 }
